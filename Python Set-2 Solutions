@@ -1,0 +1,107 @@
+numbers=[]
+for x in range(2000, 3200):
+    if (x%7==0) and (x%5!=0):
+        numbers.append(str(x))
+print (','.join(numbers))
+    
+#factorial of a given number
+def factorial(n):
+    fact = 1
+    for i in range(1,n+1): 
+        fact = fact * i 
+      
+    print ("The factorial of ",n,"is : ",end="") 
+    print (fact)
+
+factorial(8)
+
+#Convert to list & tuple
+n = 34,67,55,33,12,98
+
+print(list(n))
+print(tuple(n))
+
+
+#Construct a class
+class String():
+    def __init__(self):
+        self.string1 = ""
+
+    def get_String(self):
+        self.string1 = input()
+
+    def print_String(self):
+        print(self.string1.upper())
+
+string1 = String()
+string1.get_String()
+string1.print_String()
+
+
+#Sorting
+items = input("Input comma separated words ")
+words = [word for word in items.split(",")]
+print(",".join(sorted(list(set(words)))))
+
+#Calculate Letters and numbers
+def calculate_Letters_and_Numbers():
+    s = input("Enter a String : ")
+    d=0
+    l=0
+    for c in s:
+        if c.isdigit():
+            d=d+1
+        elif c.isalpha():
+            l=l+1
+        else:
+            pass
+    print("LETTERS", l)
+    print("DIGITS", d)
+    
+calculate_Letters_and_Numbers()
+
+#Validate Password
+import re
+pw= input("Enter your password : ")
+x = True
+while x:  
+    if (len(pw)<6 or len(pw)>12):
+        break
+    elif not re.search("[a-z]",pw):
+        break
+    elif not re.search("[0-9]",pw):
+        break
+    elif not re.search("[A-Z]",pw):
+        break
+    elif not re.search("[$#@]",pw):
+        break
+    elif re.search("\s",pw):
+        break
+    else:
+        print("Valid Password")
+        x=False
+        break
+
+if x:
+    print("Not a Valid Password")
+    
+#Count Chicken and Rabbits
+def count(heads, numLegs):
+    for rabbits in range(heads + 1):
+        chickens = heads - rabbits
+        if 2 * chickens + 4 * rabbits == numLegs:
+            return chickens, rabbits
+    return None, None
+    
+numHeads = int(input("Input number of heads: "))
+numLegs = int(input("Input number of legs: "))
+result = count(numHeads, numLegs)
+print(result)
+
+#Compress and Decompress a String
+import zlib
+s = "hello world!hello world!hello world!hello world!"
+c = zlib.compress(s)
+print(c)
+print(zlib.decompress(c))
+
