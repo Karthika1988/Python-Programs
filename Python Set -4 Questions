@@ -1,0 +1,19 @@
+1 Convert a decimal number to binary
+2. Write a program to find Fibonacci sequence
+3. Write a program to find difference between two given dates and time (format of the input will be like time 1 : dd/mm/yyyy hh:mm:ss. Time 2 : dd/mm/yyyy hh:mm:ss)
+4. Find factorial of a number
+5.  Reverse a given string (don’t use inbuilt methods) 
+6.	Now try to develop a call for calculator which perform add, sub, mul and div operations
+7.	Create a parent class where it will ask the user input, Validate this and then pass to calculator class , (Basically calculator class will inherit this parent class for getting input numbers and to check if they are valid numbers)
+8.	Perform addition using decorators (Here in the Decorator function make sure that numbers are valid)
+9.	Write a script that will recursively browse through a directory and list all the files which has the word ‘HCL’ in it. Use regular expression and make this case insensitive
+10.	Use lambda and print the square of all even numbers in the range (1 – 100)
+11.	Using list comprehension to print the square of all even numbers in the range (1 – 100)
+12.	Have a dictionary with random key element and try to sort the dictionary based on the keys of the dictionary
+13.	Print all prime numbers in a range say (100 - 1000)
+14.	Check if the given string is palindrome
+15.	Validate the given ipv4 address
+16.	Write a program that validates if the given email is valid
+17.	Write a program that validates if the given phone number is valid (Assume +1 234 567 2345 and 234 567 2345 both are valid)
+18.	Increment the given ip address by x number,  say if the input is 192.168.3.225 and increment number is 100 then the output has to be 192.168.4.70
+19.	Write a program that connect to a device it can be even localhost (use pexpect package) and print all the files in the default directory
