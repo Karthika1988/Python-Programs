@@ -1,0 +1,130 @@
+#Convert a decimal number to binary
+def convertToBinary(n):
+    if(n > 1):  
+        convertToBinary(n//2)  
+    print(n%2, end=' ')
+    
+convertToBinary(34)
+
+#Fibonacci sequence
+def fibonacciSeries(n):
+    n1 = 0
+    n2 = 1
+    count = 0
+    print("Fibonacci sequence upto",n,":")
+    while count < n:
+        print(n1,end=' , ')
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        count += 1
+        
+fibonacciSeries(8)
+
+#factorial 
+def factorial(num):
+    fact = 1
+    for i in range(1,num + 1):
+       fact = fact*i
+    print("The factorial of",num,"is",fact)
+   
+factorial(7)
+
+#Reverse a given string
+def reverse(s): 
+  str = "" 
+  for i in s: 
+    str = i + str
+  return str
+s = "PYTHON" 
+print ("The reversed string is : ",end="") 
+print (reverse(s)) 
+
+
+#develop a call for calculator
+def add(x, y):
+   return x + y
+
+def subtract(x, y):
+   return x - y
+
+def multiply(x, y):
+   return x * y
+
+def divide(x, y):
+   return x / y
+
+print("Choose operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+choice = input("Enter choice(1/2/3/4):")
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if choice == '1':
+   print(num1,"+",num2,"=", add(num1,num2))
+elif choice == '2':
+   print(num1,"-",num2,"=", subtract(num1,num2))
+elif choice == '3':
+   print(num1,"*",num2,"=", multiply(num1,num2))
+elif choice == '4':
+   print(num1,"/",num2,"=", divide(num1,num2))
+
+#Use lambda and print the square of all even numbers
+numbers = list(range(0, 101, 2))
+numbers = filter(lambda x: x % 2 == 0, numbers)
+numbers = list(numbers)
+print ([i**2 for i in numbers])
+
+
+#list comprehension to print the square of all even numbers in the range
+squares = [x ** 2 for x in range(0,101,2) if x % 2 == 0]
+print(squares)
+
+#prime numbers in a range say (100 - 1000)
+for num in range(100,1000):
+    prime = True
+    for i in range(2,num):
+        if (num%i==0):
+            prime = False
+    if prime:
+       print(num)
+
+#check_Palindrome       
+def check_Palindrome():
+    str = 'Abcba'
+    str = str.lower()
+    # reverse the string
+    rev_str = reversed(str)
+
+    if list(str) == list(rev_str):
+        print("It is palindrome")
+    else:
+        print("It is not palindrome")
+        
+check_Palindrome()
+
+#Validate the given ipv4 address
+import socket
+addr = '128.0.0.3331'
+try:
+    socket.inet_aton(addr)
+    print("Valid IP")
+except socket.error:
+    print("Invalid IP")
+
+#Search for a string
+import glob
+import os
+os.chdir( "C:/PythonFiles" )
+for files in glob.glob( "*.h" ):
+    f = open( files, 'r' )
+    file_contents = f.read()
+    if "hcl" in file_contents:
+            print(f.name)
+    f.close()
+
